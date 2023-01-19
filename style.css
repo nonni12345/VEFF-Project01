@@ -1,0 +1,12 @@
+#body {
+    background-color: blue;
+}
+
+@media only screen and (min-width: 599px) {
+    #oopsImage {
+        display: none;
+    }
+    #piano {
+        display: none
+    }
+}
