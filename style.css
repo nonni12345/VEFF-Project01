@@ -1,12 +1,57 @@
-#body {
-    background-color: blue;
-}
-
-@media only screen and (min-width: 599px) {
-    #oopsImage {
+@media only screen and (min-width: 600px) { /* Piano is displayed */
+    #errorContainer {
         display: none;
     }
     #piano {
-        display: none
+        background-color: #301c82;
+        padding: 20px;
+    }
+    #pianoContainer {
+        width: 80%;
+        margin: auto;
+    }
+    #pianoHeader {
+        background-color: #008000;
+        margin-bottom: 20px;
+    }
+
+    /*  Piano Keys */
+
+    #pianoKeys {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .black-key{
+        position: relative;
+        right: 2%;
+        top: 0;
+        color: white;
+        width: 20px;
+        height: 140px;
+        background-color: black;
+    }
+
+    .white-key {
+        position: relative;
+        color: black;
+        width: 100%;
+        height: 230px;
+        background-color: white;
+        border: 1px grey solid;
+        margin: 0 2px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) { /* Error message is displayed */
+    #piano { 
+        display: none;
+    }
+    #errorContainer {
+        text-align: center;
     }
 }
