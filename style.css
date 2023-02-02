@@ -28,7 +28,7 @@
     .white-key {
         color: black;
         width: 50%;
-        height: 150px;
+        height: 12rem;
         background-color: white;
         border: 1px grey solid;
     }
@@ -36,16 +36,18 @@
     /* Black Keys */
     .black-key{
         top: 0;
-        width: 1.4rem;
-        height: 75px;
+        width: 10%rem;
+        height: 60%;
         position: absolute;
         color: white;
         background-color: black;
     }
     #C {
-        left: 8.5%
+        left: 7.7%
     }
-
+    #DX4 {
+        left: 17.3%
+    }
     
 }
 
