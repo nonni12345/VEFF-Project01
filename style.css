@@ -1,61 +1,156 @@
+#piano {
+    display: none;
+}
+#errorContainer {
+    text-align: center;
+}
 @media only screen and (min-width: 600px) { /* Piano is displayed */
     #errorContainer {
         display: none;
     }
     #piano {
+        display: block;
         background-color: #301c82;
         padding: 20px;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: auto;
     }
     #pianoContainer {
         width: 80%;
         margin: auto;
     }
     #pianoHeader {
+        font-weight: 540;
+        display: flex;
         background-color: #008000;
         margin-bottom: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #recordContainer {
+        grid-column: 3;
+        display: flex;
+        text-align: right;
+        flex-flow: row;
+    
+    }
+    #tuneContainer {
+        display: flex;
+        flex-flow: row;
+    }
+    #tuneContainer #songSelector {
+        height: 20px;
+        margin: auto 5px;
+    }
+    label[for=songSelector] {
+        margin: auto 3px;
+    }
+    #playImage {
+        background-color: white;
+        color: black;
+        height: 17px;
+        width: 17px;
+        padding: 7px;
+        border-radius: 2px;
+    }
+
+
+    #recordImage {
+        background-color: white;
+        margin: auto 5px;
+        color: black;
+        height: 17px;
+        width: 17px;
+        padding: 6px;
+        border-radius: 2px;                                                        
+    }
+
+    #stopImage {
+        background-color: white;
+        margin: auto 4px;
+        color: red;
+        opacity: 50%;
+        height: 17px;
+        width: 17px;
+        padding: 6px;
+        border-radius: 2px;
     }
 
     /*  Piano Keys */
+    .pianoKey {
+        font-family: Arial;
+    }
+    .pianoKey p {
+        margin: 0;
+    }
 
-    #pianoKeys {
+    #pianoKeysContainer {
         position: relative;
         width: 100%;
         display: flex;
         align-items: center;
+        background-color: black;
     }
 
     
     .white-key {
         color: black;
         width: 50%;
-        height: 12rem;
+        height: 13rem;
         background-color: white;
         border: 1px grey solid;
+        box-shadow: 1px 1px grey;
+        margin: 0 0.8px;
     }
 
+    .white-key:active {
+        background-color: grey;
+    }
     /* Black Keys */
-    .black-key{
+    .black-key {
         top: 0;
-        width: 10%rem;
-        height: 60%;
+        width: 6%;
+        max-width: 40px;
+        height: 65%;
         position: absolute;
         color: white;
         background-color: black;
+        border: 1px solid grey;
+    }
+    .black-key:active {
+        background-color: grey;
     }
     #C {
-        left: 7.7%
+        left: 7.4%
     }
     #DX4 {
         left: 17.3%
     }
+    #FX4 {
+        left: 37.2%
+    }
+    #GX4 {
+        left: 47.2%
+    }
+    #Bb4 {
+        left: 57%
+    }
+    #CX5 {
+        left: 77.4%;
+    }
+    #DX5 {
+        left: 87.4%;
+    }
     
 }
 
-@media only screen and (max-width: 600px) { /* Error message is displayed */
+@media only screen and (max-width: 599px) { /* Error message is displayed */
     #piano { 
         display: none;
     }
     #errorContainer {
         text-align: center;
+        display: block;
     }
 }
